@@ -1,12 +1,17 @@
 import os
 import kagglehub
 
-def downlaod_dataset():
-    data_path = "data"
-    fake_file = os.path.join(data_path, "Fake.csv")
-    true_file = os.path.join(data_path, "True.csv")
+def download_dataset(dataset_path="data"):
+    false_file = os.path.join(dataset_path, "Fake.csv")
+    true_file = os.path.join(dataset_path, "True.csv")
 
-    if os.path.exists(fake_file) and os.path.exists(true_file):
+    if os.path.exists(false_file) and os.path.exists(true_file):
         print("Dataset already exists, skipping download.")
-    else:
-        kagglehub.dataset_download("clmentbisaillon/fake-and-real-news-dataset", output_dir=data_path)
+        return dataset_path
+
+    try:
+        os.makedirs(dataset_path, exist_ok=True)
+        kagglehub.dataset_download("clmentbisaillon/fake-and-real-news-dataset", output_dir=dataset_path)
+        return dataset_path
+    except Exception as exc:
+        raise RuntimeError("Download failed.") from exc
