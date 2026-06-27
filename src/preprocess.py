@@ -1,6 +1,6 @@
 import pandas as pd
 
-def load_and_merge(true_path='data/Fake.csv', false_path='data/True.csv'):
+def load_and_merge(true_path='data/True.csv', false_path='data/Fake.csv'):
 
     fake_dataFrame = pd.read_csv(false_path)
     real_dataFrame = pd.read_csv(true_path)
