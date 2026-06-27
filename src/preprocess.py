@@ -10,4 +10,5 @@ def load_and_merge(true_path='data/Fake.csv', false_path='data/True.csv'):
 
     mergedDataFrame = pd.concat([real_dataFrame, fake_dataFrame], ignore_index=True) # Add 2 data frames in to one and mix them randomly
     mergedDataFrame = mergedDataFrame.sample(frac=1, random_state=42).reset_index(drop=True)
+    
     return mergedDataFrame
