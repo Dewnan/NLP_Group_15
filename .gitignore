@@ -17,3 +17,13 @@ __pycache__/
 # Large datasets
 data/*.csv
 desktop.ini
+
+# Processed datasets
+data/processed/
+notebooks/data/
+
+# Raw datasets
+data/Fake.csv
+data/True.csv
+
+clean_news.csv
