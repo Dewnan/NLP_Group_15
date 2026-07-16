@@ -25,7 +25,7 @@ def load_and_merge(true_path='data/True.csv', false_path='data/Fake.csv'):
     
     return merged_df
 
-def text_cleaner(text):
+def normalize_text(text):
     text = str(text)
     text = re.sub(r'<.*?>', ' ', text)
     text = re.sub(r'https?://\S+', '', text) # remove URLs
@@ -39,13 +39,13 @@ def text_cleaner(text):
     text = re.sub(r'\s+', ' ', text).strip() # remove extra whitespace
     return text
 
-def preprocess(df):
+def build_content_and_clean(df):
     # Combine title and text into a single coulmn and remove other coulmns because
     # Title alone is too short, text alone loses the headline signal
     # together they give the model the full picture of the article
     
     df['content'] = df['title'] + ' ' + df['text']
-    df['content'] = df['content'].apply(text_cleaner)
+    df['content'] = df['content'].apply(normalize_text)
     df = df.drop(columns=['title', 'text', 'subject', 'date'])
     return df
 
@@ -53,7 +53,7 @@ stop_words = set(stopwords.words('english'))
 lemmatizer = WordNetLemmatizer()
 
 def tokenize_and_lemmatize(text):
-    text = text.lower() # Lowercase here because text_cleaner() regex depends on letter casing.
+    text = text.lower() # Lowercase here because normalize_text() regex depends on letter casing.
     tokens = word_tokenize(text)
     
     cleaned_tokens = []
