@@ -1,7 +1,8 @@
 import os
+import shutil
 import kagglehub
 
-def download_dataset(dataset_path="../../data"):
+def download_dataset(dataset_path="data"):
     false_file = os.path.join(dataset_path, "Fake.csv")
     true_file = os.path.join(dataset_path, "True.csv")
 
@@ -11,7 +12,12 @@ def download_dataset(dataset_path="../../data"):
 
     try:
         os.makedirs(dataset_path, exist_ok=True)
-        kagglehub.dataset_download("clmentbisaillon/fake-and-real-news-dataset", output_dir=dataset_path)
+        src_path = kagglehub.dataset_download("clmentbisaillon/fake-and-real-news-dataset")
+
+        for fname in os.listdir(src_path):
+            if fname.endswith(".csv"):
+                shutil.copy(os.path.join(src_path, fname), dataset_path)
+
         return dataset_path
     except Exception as exc:
         raise RuntimeError("Download failed.") from exc
