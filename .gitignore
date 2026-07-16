@@ -13,9 +13,13 @@ __pycache__/
 *.h5
 *.keras
 *.pkl
-
+models/*.h5
+models/*.pkl
+models/*.pt
+models/*.keras
 # Large datasets
 data/*.csv
+data/*.json
 desktop.ini
 
 # Processed datasets
@@ -29,3 +33,6 @@ data/True.csv
 clean_news.csv
 
 .ipynb_checkpoints/
+
+# Logs
+*.log
