@@ -63,3 +63,7 @@ def tokenize_and_lemmatize(text):
             cleaned_tokens.append(lemmatized)
     
     return ' '.join(cleaned_tokens)
+
+def apply_tokenize(df):
+    df['content'] = df['content'].apply(tokenize_and_lemmatize)
+    return df
