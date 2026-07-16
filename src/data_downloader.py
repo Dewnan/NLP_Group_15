@@ -1,7 +1,7 @@
 import os
 import kagglehub
 
-def download_dataset(dataset_path="data"):
+def download_dataset(dataset_path="../../data"):
     false_file = os.path.join(dataset_path, "Fake.csv")
     true_file = os.path.join(dataset_path, "True.csv")
 
