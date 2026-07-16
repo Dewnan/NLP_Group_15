@@ -27,3 +27,5 @@ data/Fake.csv
 data/True.csv
 
 clean_news.csv
+
+.ipynb_checkpoints/
