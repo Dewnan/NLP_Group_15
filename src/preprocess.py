@@ -43,7 +43,7 @@ def build_content_and_clean(df):
     # Combine title and text into a single coulmn and remove other coulmns because
     # Title alone is too short, text alone loses the headline signal
     # together they give the model the full picture of the article
-    
+    df = df.copy()
     df['content'] = df['title'] + ' ' + df['text']
     df['content'] = df['content'].apply(normalize_text)
     df = df.drop(columns=['title', 'text', 'subject', 'date'])
@@ -65,5 +65,6 @@ def tokenize_and_lemmatize(text):
     return ' '.join(cleaned_tokens)
 
 def apply_tokenize(df):
+    df = df.copy()
     df['content'] = df['content'].apply(tokenize_and_lemmatize)
     return df
