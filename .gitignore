@@ -21,7 +21,6 @@ models/*.keras
 # Trained models and generated artifacts
 models/*.pkl
 models/*.joblib
-
 # Large datasets
 data/*.csv
 data/*.json
