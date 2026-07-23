@@ -196,8 +196,7 @@ Files used:
 ---
 
 # Installation
-# Environment Setup
-
+Download the dataset and put the  Fake and True CSV files to 'data' folder.
 ## Requirements
 
 * Python 3.x
