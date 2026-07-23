@@ -1,154 +1,97 @@
-# Fake News Detection using Natural Language Processing (NLP)
+# Fake News Detection using NLP
+## CCS3356 – Natural Language Processing (NLP)
 
-## Module
+### Branch Information
 
-**CCS3356 – Natural Language Processing**
+**Repository:** NLP_Group_15
 
-## Project Type
+**Branch:** `feature/CIT-24-01-0258-model`
 
-Group Assignment
+**Member:** Pesara
 
-## Group Name
-
-NLP_Group_15
+**Student ID:** CIT-24-01-0258
 
 ---
 
 # Project Overview
 
-This project develops a Fake News Detection system using Natural Language Processing (NLP) techniques. The system classifies news articles as either **Fake** or **Real** by applying text preprocessing, feature engineering, machine learning, and deep learning models.
+This branch contains the individual implementation of my assigned Machine Learning and Deep Learning models for the Fake News Detection project.
 
-The project follows the complete NLP pipeline, including data preprocessing, exploratory data analysis (EDA), feature extraction, model development, evaluation, and comparison.
-
----
-
-# Problem Statement
-
-The rapid spread of fake news through online platforms can mislead the public and create misinformation. This project aims to build an automated Fake News Detection system capable of classifying news articles accurately using NLP techniques.
+The project applies the complete Natural Language Processing (NLP) pipeline to classify news articles as **Fake** or **Real** using a publicly available dataset.
 
 ---
 
-# Dataset
+# Individual Contribution
 
-**Dataset Name**
+### Machine Learning Model
 
-Fake and Real News Dataset
+- Support Vector Machine (SVM)
 
-**Source**
+### Deep Learning Model
 
-https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset
-
-Files used:
-
-- Fake.csv
-- True.csv
-
----
-
-# Group Members
-
-| Member | Student ID | Name | ML Model | DL Model |
-|---------|------------|------|----------|----------|
-| Member 1 | CIT-24-01-0258 | Pesara | Support Vector Machine (SVM) | Long Short-Term Memory (LSTM) |
-| Member 2 | CIT-24-01-0185 | Sahan | Random Forest | GRU |
-| Member 3 | CIT-24-01-0020 | Dewnan | Logistic Regression | CNN |
-
----
-
-# Project Structure
-
-```
-project-root/
-
-│
-
-├── data/
-
-├── notebooks/
-
-├── src/
-
-├── models/
-
-├── reports/
-
-├── screenshots/
-
-├── videos/
-
-├── requirements.txt
-
-├── README.md
-
-└── .gitignore
-```
-
----
-
-# Technologies Used
-
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Scikit-learn
-- TensorFlow / Keras
-- Jupyter Notebook
-- Git
-- GitHub
+- Long Short-Term Memory (LSTM)
 
 ---
 
 # NLP Pipeline
 
-1. Data Collection
-2. Data Preprocessing
-3. Exploratory Data Analysis (EDA)
-4. TF-IDF Feature Engineering
-5. Machine Learning Model (SVM)
-6. Deep Learning Model (LSTM)
-7. Model Evaluation
-8. Model Comparison
+The following stages have been completed.
+
+## Notebook 1
+
+Dataset Collection & Preprocessing
+
+Tasks:
+
+- Load dataset
+- Merge datasets
+- Clean text
+- Remove punctuation
+- Remove stop words
+- Lemmatization
+- Save cleaned dataset
 
 ---
 
-# Individual Models
+## Notebook 2
 
-## Member 1
+Exploratory Data Analysis (EDA)
 
-Machine Learning
+Tasks:
 
-- Support Vector Machine (SVM)
-
-Deep Learning
-
-- Long Short-Term Memory (LSTM)
-
-## Member 2
-
-Machine Learning
-
-- Random Forest
-
-Deep Learning
-
-- GRU
-
-## Member 3
-
-Machine Learning
-
-- Logistic Regression
-
-Deep Learning
-
-- CNN
+- Class distribution
+- Word frequency
+- Article length analysis
+- Visualizations
+- Dataset insights
 
 ---
 
-# Evaluation Metrics
+## Notebook 3
 
-The models are evaluated using:
+TF-IDF Feature Engineering
+
+Tasks:
+
+- Train/Test Split
+- TF-IDF Vectorization
+- Save vectorizer
+- Save processed datasets
+
+---
+
+## Notebook 4
+
+Support Vector Machine (SVM)
+
+Tasks:
+
+- Train SVM
+- Generate predictions
+- Evaluate model
+- Save trained model
+
+Evaluation Metrics
 
 - Accuracy
 - Precision
@@ -158,31 +101,110 @@ The models are evaluated using:
 
 ---
 
-# Setup Instructions
+## Notebook 5
 
-Clone the repository:
+Long Short-Term Memory (LSTM)
+
+Tasks
+
+- Tokenization
+- Sequence Padding
+- LSTM Architecture
+- Model Training
+- Model Evaluation
+- Save trained model
+
+Evaluation Metrics
+
+- Accuracy
+- Precision
+- Recall
+- F1 Score
+- Confusion Matrix
+
+---
+
+## Notebook 6
+
+Model Comparison
+
+Tasks
+
+- Load saved models
+- Generate predictions
+- Compare SVM and LSTM
+- Automatic evaluation
+- Export comparison table
+- Select best-performing model
+
+---
+
+# Folder Structure
+
+```
+data/
+│
+├── raw/
+├── processed/
+│
+models/
+│
+notebooks/
+│
+reports/
+│
+screenshots/
+│
+src/
+│
+videos/
+│
+requirements.txt
+README.md
+```
+
+---
+
+# Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- TensorFlow / Keras
+- Matplotlib
+- Joblib
+- Jupyter Notebook
+
+---
+
+# Dataset
+
+Dataset Name
+
+Fake and Real News Dataset
+
+Source
+
+Kaggle
+
+---
+
+# Installation
+
+Clone the repository
 
 ```bash
 git clone https://github.com/Dewnan/NLP_Group_15.git
 ```
 
-Open the project folder.
-
-Create a virtual environment:
+Checkout this branch
 
 ```bash
-python -m venv venv
+git checkout feature/CIT-24-01-0258-model
 ```
 
-Activate the environment.
-
-Windows
-
-```bash
-venv\Scripts\activate
-```
-
-Install dependencies:
+Install dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -192,7 +214,7 @@ pip install -r requirements.txt
 
 # Running the Project
 
-Run the notebooks in the following order:
+Run the notebooks in the following order.
 
 1. 01_Dataset_Preprocessing.ipynb
 
@@ -206,31 +228,45 @@ Run the notebooks in the following order:
 
 6. 06_Model_Comparison.ipynb
 
-Running the notebooks in this order ensures that all required datasets, models, and intermediate files are generated automatically.
+Each notebook generates the files required for the next notebook.
 
 ---
 
-# Results Summary
+# Models Implemented
 
-The project compares six different machine learning and deep learning models developed by the three group members.
+Machine Learning
 
-The best-performing model will be selected based on:
+- Support Vector Machine (SVM)
 
-- Accuracy
-- Precision
-- Recall
-- F1 Score
+Deep Learning
 
-The selected model will be integrated into the final application.
+- Long Short-Term Memory (LSTM)
 
 ---
 
-# Repository
+# Output
 
-https://github.com/Dewnan/NLP_Group_15
+The project automatically generates
+
+- Clean dataset
+- TF-IDF Vectorizer
+- SVM Model
+- LSTM Model
+- Model Comparison
+- Evaluation Metrics
+- Confusion Matrices
 
 ---
 
-# License
+# Author
 
-This repository was developed for academic purposes as part of the CCS3356 Natural Language Processing module at Sri Lanka Technology Campus.
+Pesara
+
+Student ID: CIT-24-01-0258
+
+Branch
+
+feature/CIT-24-01-0258-model
+
+Sri Lanka Technology Campus
+CCS3356 – Natural Language Processing
