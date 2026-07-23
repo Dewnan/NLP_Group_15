@@ -38,13 +38,16 @@ def normalize_text(text):
     return text
 
 def build_content_and_clean(df):
-    # Combine title and text into a single coulmn and remove other coulmns because
-    # Title alone is too short, text alone loses the headline signal
-    # together they give the model the full picture of the article
+    # Combine title and text into a single column and remove other columns
     df = df.copy()
-    df['content'] = df['title'] + ' ' + df['text']
+    df['content'] = (df['title'].fillna('') + ' ' + df['text'].fillna('')).str.strip() # fill NaN
     df['content'] = df['content'].apply(normalize_text)
     df = df.drop(columns=['title', 'text', 'subject', 'date'])
+    
+    before = len(df)
+    df = df[df['content'].str.split().str.len() >= 5].reset_index(drop=True)
+    print(f"Dropped {before - len(df)} rows with empty or near empty content")
+
     return df
 
 stop_words = set(stopwords.words('english'))
