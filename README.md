@@ -191,26 +191,124 @@ Kaggle
 ---
 
 # Installation
+# Environment Setup
 
-Clone the repository
+## Requirements
+
+* Python 3.x
+* VS Code
+* Jupyter Notebook
+* Git
+
+---
+
+# Clone Repository
+
+Open terminal:
 
 ```bash
 git clone https://github.com/Dewnan/NLP_Group_15.git
 ```
 
-Checkout this branch
+Move into project folder:
+
+```bash
+cd NLP_Group_15
+```
+
+---
+
+# Switch to Member 1 Branch
 
 ```bash
 git checkout feature/CIT-24-01-0258-model
 ```
 
-Install dependencies
+---
+
+# Create Virtual Environment
+
+Create a Python virtual environment:
+
+```bash
+python -m venv venv
+```
+
+---
+
+# Activate Virtual Environment
+
+## Windows PowerShell
+
+```bash
+venv\Scripts\activate
+```
+
+After activation:
+
+```
+(venv)
+```
+
+will appear in the terminal.
+
+Example:
+
+```
+(venv) PS D:\NLP_Group_15>
+```
+
+---
+
+# Install Required Libraries
+
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
 ---
+
+# Running the Notebooks
+
+Open the project using VS Code.
+
+Select:
+
+```
+Python Interpreter
+        ↓
+venv
+```
+
+Open Jupyter notebooks.
+
+Run:
+
+```
+Kernel
+   ↓
+Restart Kernel
+   ↓
+Run All
+```
+
+Execute notebooks from:
+
+```
+01_Dataset_Preprocessing.ipynb
+```
+
+to
+
+```
+06_Model_Comparison.ipynb
+```
+
+---
+
+
 
 # Running the Project
 
