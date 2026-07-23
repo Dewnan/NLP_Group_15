@@ -201,7 +201,7 @@ Download the dataset and put the  Fake and True CSV files to 'data' folder.
 
 * Python 3.x
 * VS Code
-* Jupyter Notebook
+* Jupyter Notebook (Extention inside vs code)
 * Git
 
 ---
