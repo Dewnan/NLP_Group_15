@@ -257,7 +257,52 @@ The project automatically generates
 - Confusion Matrices
 
 ---
+# result summary
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Model</th>
+      <th>Accuracy</th>
+      <th>Precision</th>
+      <th>Recall</th>
+      <th>F1 Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>SVM</td>
+      <td>0.994965</td>
+      <td>0.996217</td>
+      <td>0.993164</td>
+      <td>0.994688</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>LSTM</td>
+      <td>0.983889</td>
+      <td>0.978738</td>
+      <td>0.987506</td>
+      <td>0.983103</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 # Author
 
 Pesara
