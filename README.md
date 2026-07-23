@@ -58,7 +58,7 @@ The dataset includes:
 
 ```bash
 git clone <repository-url>
-cd NLP_Group_XX
+cd NLP_Group_15
 ```
 
 ### 2. Create a Virtual Environment
