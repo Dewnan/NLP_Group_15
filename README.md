@@ -180,13 +180,18 @@ README.md
 
 # Dataset
 
-Dataset Name
+**Dataset Name**
 
 Fake and Real News Dataset
 
-Source
+**Source**
 
-Kaggle
+https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset
+
+Files used:
+
+- Fake.csv
+- True.csv
 
 ---
 
