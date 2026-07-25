@@ -1,4 +1,4 @@
-# Fake News Detection using NLP
+# Fake News Detection Using Machine Learning and Deep Learning
 
 **CCS3356 – Natural Language Processing (NLP)**
 
