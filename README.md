@@ -48,16 +48,18 @@ The project applies Natural Language Processing (NLP) techniques to classify new
 2. Dataset Collection
 3. Dataset Exploration
 4. Dataset Merging and Labeling
-5. Text Preprocessing
-6. Exploratory Data Analysis (EDA)
-7. TF-IDF Feature Extraction
-8. Train-Test Split
-9. Random Forest Model
-10. Random Forest Evaluation
-11. GRU Model
-12. GRU Training
-13. GRU Evaluation
-14. Model Comparison
+5. Text Cleaning
+6. Save Cleaned Dataset
+7. Text Preprocessing
+8. Exploratory Data Analysis (EDA)
+9. Train-Test Split
+10. TF-IDF Feature Extraction
+11. Random Forest Model
+12. Random Forest Evaluation
+13. GRU Model
+14. GRU Training
+15. GRU Evaluation
+16. Model Comparison
 
 ---
 
@@ -71,12 +73,14 @@ The notebook performs the following tasks:
 - Convert text to lowercase
 - Remove punctuation
 - Remove numbers
+- Save cleaned dataset
+- Tokenize text
 - Remove stop words
 - Lemmatization
 - Create `Clean_Text`
 - Exploratory Data Analysis (EDA)
-- TF-IDF Feature Extraction
 - Train-Test Split
+- TF-IDF Feature Extraction
 - Train Random Forest Model
 - Evaluate Random Forest
 - Build and Train GRU Model
@@ -193,10 +197,27 @@ pip install -r requirements.txt
 
 ---
 
+# VS Code Setup
+
+1. Install Visual Studio Code from https://code.visualstudio.com/
+2. Install these VS Code extensions:
+   - Python (by Microsoft)
+   - Jupyter (by Microsoft)
+3. Open the project folder in VS Code:
+```bash
+   code NLP_Group_15
+```
+4. Open the Command Palette (`Ctrl+Shift+P`) and select **Python: Select Interpreter**.
+5. Choose the interpreter inside your virtual environment (`venv\Scripts\python.exe`).
+6. Open `notebooks/sahan_random_forest.ipynb` from the Explorer panel.
+7. Click **Select Kernel** in the top-right corner of the notebook and choose the same virtual environment interpreter.
+
+---
+
 # Running the Notebook
 
 1. Open the project in VS Code.
-2. Select the Python interpreter.
+2. Select the Python interpreter (see VS Code Setup above).
 3. Open `notebooks/sahan_random_forest.ipynb`.
 4. Select the Jupyter kernel.
 5. Click **Run All** to execute all cells.
@@ -221,6 +242,7 @@ The notebook generates:
 
 - Cleaned Dataset
 - Clean_Text Column
+- Train-Test Split
 - TF-IDF Features
 - Random Forest Model
 - GRU Model
@@ -234,8 +256,8 @@ The notebook generates:
 
 | Model | Accuracy |
 |--------|----------|
-| Random Forest | 99.69% |
-| GRU | *(Add your final GRU accuracy here)* |
+| Random Forest | 99.64% |
+| GRU | 99.03% |
 
 ---
 
