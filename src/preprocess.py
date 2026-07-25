@@ -37,6 +37,21 @@ def normalize_text(text):
     text = re.sub(r'\s+', ' ', text).strip() # remove extra whitespace
     return text
 
+def drop_duplicate_rows(df, column):
+    df_len_before = len(df)
+    df = df.drop_duplicates(subset=[column]).reset_index(drop=True) # Dropping duplicate rows from content
+    dropped_count = df_len_before- len(df)
+    print(f"Dropped {dropped_count} duplicate rows")
+    
+    return df
+
+def drop_short_content(df, min_words=5):
+    df_len_before = len(df)
+    df = df[df['content'].str.split().str.len() >= min_words].reset_index(drop=True) # dropping empty rows and rows with less than 5 charactors
+    print(f"Dropped {df_len_before - len(df)} rows with empty or near empty content")
+
+    return df
+
 def build_content_and_clean(df):
     # Combine title and text into a single column and remove other columns
     df = df.copy()
@@ -44,10 +59,9 @@ def build_content_and_clean(df):
     df['content'] = df['content'].apply(normalize_text)
     df = df.drop(columns=['title', 'text', 'subject', 'date'])
     
-    before = len(df)
-    df = df[df['content'].str.split().str.len() >= 5].reset_index(drop=True)
-    print(f"Dropped {before - len(df)} rows with empty or near empty content")
-
+    df = drop_duplicate_rows(df, column='content')
+    df = drop_short_content(df, 5)
+    
     return df
 
 stop_words = set(stopwords.words('english'))
