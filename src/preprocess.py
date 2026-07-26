@@ -65,6 +65,9 @@ def build_content_and_clean(df):
     return df
 
 stop_words = set(stopwords.words('english'))
+custom_stopwords = {"u", "reuters"}
+stop_words.update(custom_stopwords)
+
 lemmatizer = WordNetLemmatizer()
 
 def tokenize_and_lemmatize(text):
