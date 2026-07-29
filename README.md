@@ -40,7 +40,7 @@ The project applies Natural Language Processing (NLP) techniques to classify new
 
 **Notebook**
 
-- `notebooks/sahan_random_forest.ipynb`
+- `notebooks/fake_news_detection_random_forest_gru.ipynb`
 
 ### Sections Included
 
@@ -100,7 +100,7 @@ NLP_Group_15/
 │
 ├── models/
 ├── notebooks/
-│   └── sahan_random_forest.ipynb
+│   └── fake_news_detection_random_forest_gru.ipynb
 │
 ├── reports/
 ├── screenshots/
@@ -209,7 +209,7 @@ pip install -r requirements.txt
 ```
 4. Open the Command Palette (`Ctrl+Shift+P`) and select **Python: Select Interpreter**.
 5. Choose the interpreter inside your virtual environment (`venv\Scripts\python.exe`).
-6. Open `notebooks/sahan_random_forest.ipynb` from the Explorer panel.
+6. Open `notebooks/fake_news_detection_random_forest_gru.ipynb` from the Explorer panel.
 7. Click **Select Kernel** in the top-right corner of the notebook and choose the same virtual environment interpreter.
 
 ---
@@ -218,7 +218,7 @@ pip install -r requirements.txt
 
 1. Open the project in VS Code.
 2. Select the Python interpreter (see VS Code Setup above).
-3. Open `notebooks/sahan_random_forest.ipynb`.
+3. Open `notebooks/fake_news_detection_random_forest_gru.ipynb`.
 4. Select the Jupyter kernel.
 5. Click **Run All** to execute all cells.
 
