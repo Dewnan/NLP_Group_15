@@ -10,17 +10,10 @@ __pycache__/
 .ipynb_checkpoints/
 
 # Model files
-*.h5
-*.keras
-*.pkl
-models/*.h5
-models/*.pkl
-models/*.pt
-models/*.keras
+
 
 # Trained models and generated artifacts
-models/*.pkl
-models/*.joblib
+
 # Large datasets
 data/*.csv
 data/*.json
