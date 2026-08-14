@@ -254,10 +254,10 @@ The notebook generates:
 
 # Result Summary
 
-| Model | Accuracy |
-|--------|----------|
-| Random Forest | 99.64% |
-| GRU | 99.03% |
+| Model | Accuracy | Precision | Recall | F1 Score |
+|-------|----------|-----------|--------|----------|
+| Random Forest | 0.996437 | 0.996485 | 0.996019 | 0.996252 |
+| GRU | 0.988976 | 0.986017 | 0.990867 | 0.988436 |
 
 ---
 
