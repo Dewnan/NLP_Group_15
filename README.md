@@ -89,88 +89,78 @@ pip install -r requirements.txt
 
 ---
 
-## How to Run the Project
+# VS Code Setup
 
-Will be updated
-
----
-
-## NLP Pipeline
-
-The following NLP pipeline will be implemented:
-
-1. Data Collection
-2. Data Cleaning
-3. Text Preprocessing
-
-   * Lowercasing
-   * Tokenization
-   * Stop-word Removal
-   * Lemmatization
-4. Exploratory Data Analysis (EDA)
-5. Feature Engineering
-
-   * TF-IDF
-   * Word Embeddings
-6. Model Training
-7. Model Evaluation
-8. Model Comparison
-9. Final Application Integration
-10. Ethics and Bias Analysis
+1. Install Visual Studio Code from https://code.visualstudio.com/
+2. Install these VS Code extensions:
+   - Python (by Microsoft)
+   - Jupyter (by Microsoft)
+3. Open the project folder in VS Code:
+```bash
+   code NLP_Group_15
+```
+4. Open the Command Palette (`Ctrl+Shift+P`) and select **Python: Select Interpreter**.
+5. Choose the interpreter inside your virtual environment (`venv\Scripts\python.exe`).
+6. Open `notebooks/fake_news_detection_random_forest_gru.ipynb` from the Explorer panel.
+7. Click **Select Kernel** in the top-right corner of the notebook and choose the same virtual environment interpreter.
 
 ---
 
-## Model Summary
+# Running the Notebook
 
-### Member 1 - Pesara
-
-#### Machine Learning Model
-
-* Support Vector Machine (SVM)
-
-#### Deep Learning Model
-
-* Long Short-Term Memory (LSTM)
+1. Open the project in VS Code.
+2. Select the Python interpreter (see VS Code Setup above).
+3. Open `notebooks/fake_news_detection_random_forest_gru.ipynb`.
+4. Select the Jupyter kernel.
+5. Click **Run All** to execute all cells.
 
 ---
 
-### Member 2 - Sahan
+# Models Implemented
 
-#### Machine Learning Model
+### Machine Learning
 
-* Random Forest
+- Random Forest
 
-#### Deep Learning Model
+### Deep Learning
 
-* Gated Recurrent Unit (GRU)
-
----
-
-### Member 3 - Dewnan
-
-#### Machine Learning Model
-
-* Logistic Regression
-
-#### Deep Learning Model
-
-* Convolutional Neural Network (CNN)
+- Gated Recurrent Unit (GRU)
 
 ---
 
-## Evaluation Metrics
+# Output
 
-The models will be evaluated using:
+The notebook generates:
 
-* Accuracy
-* Precision
-* Recall
-* F1-Score
-* Confusion Matrix
-* ROC-AUC (if applicable)
+- Cleaned Dataset
+- Clean_Text Column
+- Train-Test Split
+- TF-IDF Features
+- Random Forest Model
+- GRU Model
+- Classification Reports
+- Confusion Matrices
+- Model Comparison Results
 
 ---
 
-## Results Summary
+# Result Summary
 
-Results will be update later
+| Model | Accuracy | Precision | Recall | F1 Score |
+|-------|----------|-----------|--------|----------|
+| Random Forest | 0.996437 | 0.996485 | 0.996019 | 0.996252 |
+| GRU | 0.988976 | 0.986017 | 0.990867 | 0.988436 |
+
+---
+
+# Author
+
+**Sahan Wishvapriya**
+
+Student ID: **CIT-24-01-0185**
+
+Branch: **feature/CIT-24-01-0185-model**
+
+Sri Lanka Technology Campus
+
+**CCS3356 – Natural Language Processing**
