@@ -9,31 +9,12 @@ __pycache__/
 # Jupyter checkpoints
 .ipynb_checkpoints/
 
-# Model files
-
-
-# Trained models and generated artifacts
-
 # Large datasets
 data/*.csv
 data/*.json
 desktop.ini
 
-# Processed datasets
-data/processed/
-notebooks/data/
+# datasets
+data/*
 
-# Raw datasets
-data/Fake.csv
-data/True.csv
-
-clean_news.csv
-
-.ipynb_checkpoints/
-# Dataset files
-data/
-notebooks/data/
-*.csv
-# Logs
-*.log
-
+README.md
