@@ -15,8 +15,8 @@ def load_and_merge(true_path='data/True.csv', false_path='data/Fake.csv'):
     real_df = pd.read_csv(true_path)
     fake_df = pd.read_csv(false_path)
     
-    real_df['label'] = 0  # real
-    fake_df['label'] = 1  # fake
+    real_df['label'] = 1  # real
+    fake_df['label'] = 0  # fake
     
     merged_df = pd.concat([real_df, fake_df], ignore_index=True)
     merged_df = merged_df.sample(frac=1, random_state=42).reset_index(drop=True)
