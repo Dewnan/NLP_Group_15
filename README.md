@@ -1,87 +1,272 @@
-# Fake News Detection using Natural Language Processing
+# Fake News Detection using NLP
+## CCS3356 – Natural Language Processing (NLP)
 
-## Project Title
+### Branch Information
 
-Fake News Detection using Machine Learning and Deep Learning Techniques
+**Repository:** NLP_Group_15
 
----
+**Branch:** `feature/CIT-24-01-0258-model`
 
-## Group Members
+**Member:** Pesara
 
-| Member   | Student ID | Name   | ML Model                     | DL Model                           |
-| -------- | ---------- | ------ | ---------------------------- | ---------------------------------- |
-| Member 1 | 0258       | Pesara | Support Vector Machine (SVM) | Long Short-Term Memory (LSTM)      |
-| Member 2 | 0185       | Sahan  | Random Forest                | Gated Recurrent Unit (GRU)         |
-| Member 3 | 0020       | Dewnan | Logistic Regression          | Convolutional Neural Network (CNN) |
+**Student ID:** CIT-24-01-0258
 
 ---
 
-## Problem Statement
+# Project Overview
 
-The rapid spread of misinformation through online news platforms and social media has become a significant challenge in today's digital world. Fake news can influence public opinion, create confusion, and negatively impact decision-making processes.
+This branch contains the individual implementation of my assigned Machine Learning and Deep Learning models for the Fake News Detection project.
 
-This project aims to develop an automated Fake News Detection system using Natural Language Processing (NLP), Machine Learning (ML), and Deep Learning (DL) techniques. The system will analyze the textual content of news articles and classify them as either Real News or Fake News.
-
-Each group member will independently implement and evaluate different ML and DL models using a common dataset. The performance of all models will be compared, and the best-performing model will be integrated into the final application.
+The project applies the complete Natural Language Processing (NLP) pipeline to classify news articles as **Fake** or **Real** using a publicly available dataset.
 
 ---
 
-## Dataset Information
+# Individual Contribution
 
-### Dataset Name
+### Machine Learning Model
+
+- Support Vector Machine (SVM)
+
+### Deep Learning Model
+
+- Long Short-Term Memory (LSTM)
+
+---
+
+# NLP Pipeline
+
+The following stages have been completed.
+
+## Notebook 1
+
+Dataset Collection & Preprocessing
+
+Tasks:
+
+- Load dataset
+- Merge datasets
+- Clean text
+- Remove punctuation
+- Remove stop words
+- Lemmatization
+- Save cleaned dataset
+
+---
+
+## Notebook 2
+
+Exploratory Data Analysis (EDA)
+
+Tasks:
+
+- Class distribution
+- Word frequency
+- Article length analysis
+- Visualizations
+- Dataset insights
+
+---
+
+## Notebook 3
+
+TF-IDF Feature Engineering
+
+Tasks:
+
+- Train/Test Split
+- TF-IDF Vectorization
+- Save vectorizer
+- Save processed datasets
+
+---
+
+## Notebook 4
+
+Support Vector Machine (SVM)
+
+Tasks:
+
+- Train SVM
+- Generate predictions
+- Evaluate model
+- Save trained model
+
+Evaluation Metrics
+
+- Accuracy
+- Precision
+- Recall
+- F1 Score
+- Confusion Matrix
+
+---
+
+## Notebook 5
+
+Long Short-Term Memory (LSTM)
+
+Tasks
+
+- Tokenization
+- Sequence Padding
+- LSTM Architecture
+- Model Training
+- Model Evaluation
+- Save trained model
+
+Evaluation Metrics
+
+- Accuracy
+- Precision
+- Recall
+- F1 Score
+- Confusion Matrix
+
+---
+
+## Notebook 6
+
+Model Comparison
+
+Tasks
+
+- Load saved models
+- Generate predictions
+- Compare SVM and LSTM
+- Automatic evaluation
+- Export comparison table
+- Select best-performing model
+
+---
+
+# Folder Structure
+
+```
+data/
+│
+├── raw/
+├── processed/
+│
+models/
+│
+notebooks/
+│
+reports/
+│
+screenshots/
+│
+src/
+│
+videos/
+│
+requirements.txt
+README.md
+```
+
+---
+
+# Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- TensorFlow / Keras
+- Matplotlib
+- Joblib
+- Jupyter Notebook
+
+---
+
+# Dataset
+
+**Dataset Name**
 
 Fake and Real News Dataset
 
-### Dataset Source
+**Source**
 
 https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset
 
-### Dataset Description
+Files used:
 
-The dataset contains news articles labeled as either:
-
-* Fake News
-* Real News
-
-The dataset includes:
-
-* News titles
-* News article content
-* Subject categories
-* Publication dates
+- Fake.csv
+- True.csv
 
 ---
 
-## Setup Instructions
+# Installation
+Download the dataset and put the  Fake and True CSV files to 'data' folder.
+## Requirements
 
-### 1. Clone the Repository
+* Python 3.x
+* VS Code
+* Jupyter Notebook (Extention inside vs code)
+* Git
+
+---
+
+# Clone Repository
+
+Open terminal:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Dewnan/NLP_Group_15.git
+```
+
+Move into project folder:
+
+```bash
 cd NLP_Group_15
 ```
 
-### 2. Create a Virtual Environment
+---
+
+# Switch to Member 1 Branch
+
+```bash
+git checkout feature/CIT-24-01-0258-model
+```
+
+---
+
+# Create Virtual Environment
+
+Create a Python virtual environment:
 
 ```bash
 python -m venv venv
 ```
 
-### 3. Activate the Virtual Environment
+---
 
-Windows:
+# Activate Virtual Environment
+
+## Windows PowerShell
 
 ```bash
 venv\Scripts\activate
 ```
 
-Linux / macOS:
+After activation:
 
-```bash
-source venv/bin/activate
+```
+(venv)
 ```
 
-### 4. Install Required Dependencies
+will appear in the terminal.
+
+Example:
+
+```
+(venv) PS D:\NLP_Group_15>
+```
+
+---
+
+# Install Required Libraries
+
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
@@ -89,78 +274,133 @@ pip install -r requirements.txt
 
 ---
 
-# VS Code Setup
+# Running the Notebooks
 
-1. Install Visual Studio Code from https://code.visualstudio.com/
-2. Install these VS Code extensions:
-   - Python (by Microsoft)
-   - Jupyter (by Microsoft)
-3. Open the project folder in VS Code:
-```bash
-   code NLP_Group_15
+Open the project using VS Code.
+
+Select:
+
 ```
-4. Open the Command Palette (`Ctrl+Shift+P`) and select **Python: Select Interpreter**.
-5. Choose the interpreter inside your virtual environment (`venv\Scripts\python.exe`).
-6. Open `notebooks/fake_news_detection_random_forest_gru.ipynb` from the Explorer panel.
-7. Click **Select Kernel** in the top-right corner of the notebook and choose the same virtual environment interpreter.
+Python Interpreter
+        ↓
+venv
+```
+
+Open Jupyter notebooks.
+
+Run:
+
+```
+Kernel
+   ↓
+Restart Kernel
+   ↓
+Run All
+```
+
+Execute notebooks from:
+
+```
+01_Dataset_Preprocessing.ipynb
+```
+
+to
+
+```
+06_Model_Comparison.ipynb
+```
 
 ---
 
-# Running the Notebook
 
-1. Open the project in VS Code.
-2. Select the Python interpreter (see VS Code Setup above).
-3. Open `notebooks/fake_news_detection_random_forest_gru.ipynb`.
-4. Select the Jupyter kernel.
-5. Click **Run All** to execute all cells.
+
+# Running the Project
+
+Run the notebooks in the following order.
+
+1. 01_Dataset_Preprocessing.ipynb
+
+2. 02_EDA.ipynb
+
+3. 03_TFIDF_Feature_Engineering.ipynb
+
+4. 04_SVM_Model.ipynb
+
+5. 05_LSTM_Model.ipynb
+
+6. 06_Model_Comparison.ipynb
+
+Each notebook generates the files required for the next notebook.
 
 ---
 
 # Models Implemented
 
-### Machine Learning
+Machine Learning
 
-- Random Forest
+- Support Vector Machine (SVM)
 
-### Deep Learning
+Deep Learning
 
-- Gated Recurrent Unit (GRU)
+- Long Short-Term Memory (LSTM)
 
 ---
 
 # Output
 
-The notebook generates:
+The project automatically generates
 
-- Cleaned Dataset
-- Clean_Text Column
-- Train-Test Split
-- TF-IDF Features
-- Random Forest Model
-- GRU Model
-- Classification Reports
+- Clean dataset
+- TF-IDF Vectorizer
+- SVM Model
+- LSTM Model
+- Model Comparison
+- Evaluation Metrics
 - Confusion Matrices
-- Model Comparison Results
 
 ---
-
-# Result Summary
-
-| Model | Accuracy | Precision | Recall | F1 Score |
-|-------|----------|-----------|--------|----------|
-| Random Forest | 0.996437 | 0.996485 | 0.996019 | 0.996252 |
-| GRU | 0.988976 | 0.986017 | 0.990867 | 0.988436 |
-
----
-
+# result summary
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Model</th>
+      <th>Accuracy</th>
+      <th>Precision</th>
+      <th>Recall</th>
+      <th>F1 Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>SVM</td>
+      <td>0.994965</td>
+      <td>0.996217</td>
+      <td>0.993164</td>
+      <td>0.994688</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>LSTM</td>
+      <td>0.983889</td>
+      <td>0.978738</td>
+      <td>0.987506</td>
+      <td>0.983103</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 # Author
 
-**Sahan Wishvapriya**
+Pesara
 
-Student ID: **CIT-24-01-0185**
+Student ID: CIT-24-01-0258
 
-Branch: **feature/CIT-24-01-0185-model**
+Branch
+
+feature/CIT-24-01-0258-model
 
 Sri Lanka Technology Campus
-
-**CCS3356 – Natural Language Processing**
+CCS3356 – Natural Language Processing
