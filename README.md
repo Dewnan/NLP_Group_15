@@ -180,7 +180,31 @@ notebooks/fake_news_detection_random_forest_gru.ipynb
 
 **Convolutional Neural Network (CNN)**
 
-Dewnan's assigned models are implemented as part of the group's individual model comparison using the common Fake and Real News Dataset.
+### Individual NLP Pipeline
+
+Dewnan's implementation consists of:
+
+1. Data Preprocessing & Cleaning
+2. Exploratory Data Analysis (EDA)
+3. Logistic Regression with TF-IDF Feature Engineering
+4. Convolutional Neural Network (CNN) with Word Embeddings & Padded Sequences
+
+### Notebooks
+
+```text
+notebooks/dewnan/01_Preprocessing.ipynb
+notebooks/dewnan/02_eda.ipynb
+notebooks/dewnan/03_Logistic_Regression.ipynb
+notebooks/dewnan/04_cnn.ipynb
+```
+
+### Results
+
+| Model | Accuracy | Precision | Recall | F1 Score |
+| ----- | -------: | --------: | -----: | -------: |
+| Logistic Regression | 0.982998 | 0.977830 | 0.990918 | 0.984330 |
+| CNN | 0.993302 | 0.995681 | 0.991874 | 0.993774 |
+
 
 ---
 
@@ -366,6 +390,18 @@ notebooks/fake_news_detection_random_forest_gru.ipynb
 
 Select the Jupyter kernel connected to the project virtual environment and run the notebook from beginning to end.
 
+### Dewnan
+
+Run the notebooks in `notebooks/dewnan/` in the following order:
+
+```text
+01_Preprocessing.ipynb
+02_eda.ipynb
+03_Logistic_Regression.ipynb
+04_cnn.ipynb
+```
+
+
 ---
 
 # Models Implemented
@@ -421,7 +457,9 @@ The project may generate:
 
 # Results Summary
 
-The current individual model results are:
+## Individual Model Results
+
+The individual model results from each member's personal notebook outputs are summarized below:
 
 | Member | Model               | Accuracy | Precision |   Recall | F1 Score |
 | ------ | ------------------- | -------: | --------: | -------: | -------: |
@@ -429,18 +467,52 @@ The current individual model results are:
 | Pesara | LSTM                | 0.983889 |  0.978738 | 0.987506 | 0.983103 |
 | Sahan  | Random Forest       | 0.996437 |  0.996485 | 0.996019 | 0.996252 |
 | Sahan  | GRU                 | 0.988976 |  0.986017 | 0.990867 | 0.988436 |
-| Dewnan | Logistic Regression |      TBD |       TBD |      TBD |      TBD |
-| Dewnan | CNN                 |      TBD |       TBD |      TBD |      TBD |
+| Dewnan | Logistic Regression | 0.982998 |  0.977830 | 0.990918 | 0.984330 |
+| Dewnan | CNN                 | 0.993302 |  0.995681 | 0.991874 | 0.993774 |
 
-The final comparison will be updated after all group members complete their model implementations and evaluations.
+---
+
+## Cross-Team Model Comparison
+
+To ensure a fair and consistent evaluation, all saved models (Machine Learning & Deep Learning) were evaluated on a single standardized test set (`data/processed/test.csv`, comprising 3,883 unseen news articles).
+
+### Machine Learning Models Leaderboard
+
+| Rank | Model | Category | Accuracy | Precision | Recall | F1 Score |
+| ---: | :--- | :--- | -------: | --------: | -----: | -------: |
+| 1 | **Logistic Regression** | ML | 0.980428 | 0.977736 | 0.986144 | **0.981922** |
+| 2 | **SVM** | ML | 0.944373 | 0.994207 | 0.902054 | **0.945892** |
+| 3 | **Random Forest** | ML | 0.805305 | 1.000000 | 0.638796 | **0.779592** |
+
+### Deep Learning Models Leaderboard
+
+| Rank | Model | Category | Accuracy | Precision | Recall | F1 Score |
+| ---: | :--- | :--- | -------: | --------: | -----: | -------: |
+| 1 | **CNN** | DL | 0.987896 | 0.992300 | 0.985189 | **0.988732** |
+| 2 | **GRU** | DL | 0.671646 | 0.869134 | 0.460105 | **0.601687** |
+| 3 | **LSTM** | DL | 0.548287 | 0.859873 | 0.193502 | **0.315913** |
+
+### Overall Combined Leaderboard
+
+| Rank | Model | Category | Accuracy | Precision | Recall | F1 Score |
+| ---: | :--- | :--- | -------: | --------: | -----: | -------: |
+| 1 | **CNN** | DL | **0.987896** | **0.992300** | **0.985189** | **0.988732** |
+| 2 | **Logistic Regression** | ML | 0.980428 | 0.977736 | 0.986144 | 0.981922 |
+| 3 | **SVM** | ML | 0.944373 | 0.994207 | 0.902054 | 0.945892 |
+| 4 | **Random Forest** | ML | 0.805305 | 1.000000 | 0.638796 | 0.779592 |
+| 5 | **GRU** | DL | 0.671646 | 0.869134 | 0.460105 | 0.601687 |
+| 6 | **LSTM** | DL | 0.548287 | 0.859873 | 0.193502 | 0.315913 |
 
 ---
 
 # Final Model Selection
 
-After all six models have been evaluated, their performance will be compared using the selected evaluation metrics.
+Based on the standardized cross-team comparison across all six models:
 
-The best-performing model will be considered for integration into the final Fake News Detection application.
+* **Top Performing Model:** **Convolutional Neural Network (CNN)** achieved the highest performance with **98.79% Accuracy** and an **F1 Score of 0.9887**.
+* **Top Traditional ML Model:** **Logistic Regression** performed exceptionally well with **98.04% Accuracy** and an **F1 Score of 0.9819**.
+* **Selection for Integration:** The **CNN model** is selected as the primary deep learning model for the final Fake News Detection application, with **Logistic Regression** serving as a lightweight alternative.
+
 
 ---
 
