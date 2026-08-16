@@ -513,6 +513,25 @@ Based on the standardized cross-team comparison across all six models:
 * **Top Traditional ML Model:** **Logistic Regression** performed exceptionally well with **98.04% Accuracy** and an **F1 Score of 0.9819**.
 * **Selection for Integration:** The **CNN model** is selected as the primary deep learning model for the final Fake News Detection application, with **Logistic Regression** serving as a lightweight alternative.
 
+---
+
+# Web Application (`application/`)
+
+An interactive Streamlit Web Application is built inside the `application/` folder to interact with all trained models.
+
+### Features
+* **Single News Classifier**: Real-time authenticity prediction and confidence scores for title and body text.
+* **Multi-Model Selector**: Dynamically select and run predictions across all 6 models (CNN, Logistic Regression, SVM, Random Forest, GRU, and LSTM).
+
+### How to Run the Web Application
+
+```bash
+# Run using project virtual environment
+.venv/bin/streamlit run application/app.py
+```
+Access the application in your browser at `http://localhost:8501`.
+
+
 
 ---
 
